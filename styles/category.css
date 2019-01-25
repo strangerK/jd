@@ -1,0 +1,92 @@
+html {
+  font-size: 13.33333vw;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+#header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #ccc;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+#header .icon-back {
+  width: .8rem;
+  height: .9rem;
+  background-image: url(../images/sprites.png);
+  background-size: 4rem 4rem;
+  background-position: -0.4rem 0;
+  padding: .25rem .2rem;
+  background-origin: content-box;
+  background-clip: content-box;
+}
+
+#header form {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  position: relative;
+  padding: .1rem 0;
+}
+
+#header form .icon-search {
+  width: .4rem;
+  height: .4rem;
+  position: absolute;
+  left: .2rem;
+  top: 0.25rem;
+  background-image: url(../images/sprites.png);
+  background-size: 4rem 4rem;
+  background-position: -1.2rem -2.2rem;
+}
+
+#header form input {
+  width: 5.9rem;
+  height: .7rem;
+  border-radius: .35rem;
+  padding-left: .6rem;
+  font-size: .28rem;
+}
+
+#header .icon-menu {
+  width: .8rem;
+  height: .9rem;
+  background-image: url(../images/sprites.png);
+  background-size: 4rem 4rem;
+  background-position: -1.2rem 0;
+  padding: .25rem .2rem;
+  background-origin: content-box;
+  background-clip: content-box;
+}
+
+.main {
+  width: 100%;
+  height: 100%;
+  padding: 45px 0 50px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main > .left {
+  width: 100px;
+  height: 100%;
+  background-color: #f00;
+  overflow: hidden;
+}
+
+.main > .right {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: auto;
+  background-color: #0f0;
+}
+/*# sourceMappingURL=category.css.map */
