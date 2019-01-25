@@ -1,0 +1,220 @@
+// 分类页面样式
+html,
+body {
+    height: 100%;
+}
+
+#header {
+    padding: 0 .5rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    div {
+        display: flex;
+        padding: .1rem 0;
+
+        .search {
+            flex: 1;
+            padding: 0;
+            position: relative;
+
+            input {
+                width: 100%;
+                padding-left: 40px;
+                background-color: #f7f7f7;
+                border-radius: 15px;
+                height: 30px;
+                font-size: .01rem;
+            }
+
+            .icon-search {
+                position: absolute;
+                top: 7px;
+                left: 15px;
+            }
+        }
+
+        .icon-back {
+            width: 0.3rem;
+            text-align: center;
+            line-height: 30px;
+        }
+
+        .icon-more {
+            width: 0.3rem;
+            text-align: center;
+            line-height: 30px;
+        }
+    }
+}
+
+//内容区域 
+#main {
+    height: 100%;
+    padding-bottom: 1rem;
+    display: flex;
+    padding-top: 40px;
+
+    >.left {
+        width: 1.5rem;
+        text-align: center;
+        overflow: hidden;
+
+        .swiper-container {
+            height: 100%;
+
+            .swiper-slide {
+                height: auto;
+
+                li {
+                    width: 100%;
+                    height: 46px;
+                    line-height: 46px;
+                    background-color: #f3f3f3;
+                    font-size: 14px;
+
+                    &.active {
+                        background-color: #fff;
+                    }
+                }
+            }
+        }
+
+    }
+
+    .right {
+        flex: 1;
+        overflow: hidden;
+
+        .swiper-container {
+            height: 100%;
+
+            .swiper-slide {
+                height: auto;
+
+                #dd {
+                    margin-top: .1rem;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+
+                #nav {
+                    margin: .4rem 0;
+
+                    .title {
+                        font-size: .14rem;
+                        font-weight: 700;
+                    }
+
+                    .content {
+                        display: flex;
+                        flex-wrap: wrap;
+
+                        li {
+                            width: 33%;
+                            text-align: center;
+                            margin-top: .1rem;
+
+                            img {
+                                width: 0.65rem;
+                            }
+
+                            a {
+                                font-size: .14rem;
+                                color: #000;
+                            }
+                        }
+                    }
+                }
+
+                #fenlei {
+                    margin-top: .1rem;
+
+                    .title {
+                        font-size: .14rem;
+                        position: relative;
+
+                        .left {
+                            font-weight: 700;
+                        }
+
+                        .right {
+                            position: absolute;
+                            right: 0;
+
+                            .icon-paixingbang {
+                                color: red;
+                            }
+
+                            i {
+                                font-size: .14rem;
+                            }
+                        }
+                    }
+
+                    .content {
+                        ul {
+                            display: flex;
+                            flex-wrap: wrap;
+
+                            li {
+                                width: 33.3%;
+                                margin-top: .15rem;
+
+                                a {
+                                    text-align: center;
+                                    color: #000;
+                                    font-size: .14rem;
+
+                                    img {
+                                        display: block;
+                                        width: .7rem;
+                                        margin: 0 auto;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                #jiadian {
+                    margin-top: .1rem;
+
+                    .title {
+                        font-size: .14rem;
+                        font-weight: 700;
+                    }
+
+                    .content {
+                        ul {
+                            display: flex;
+                            flex-wrap: wrap;
+
+                            li {
+                                width: 33.3%;
+                                margin-top: .15rem;
+
+                                a {
+                                    text-align: center;
+                                    color: #000;
+                                    font-size: .14rem;
+
+                                    img {
+                                        display: block;
+                                        width: .7rem;
+                                        margin: 0 auto;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}

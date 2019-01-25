@@ -1,0 +1,230 @@
+html,
+body {
+  height: 100%;
+}
+
+#header {
+  padding: 0 .5rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+#header div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: .1rem 0;
+}
+
+#header div .search {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 0;
+  position: relative;
+}
+
+#header div .search input {
+  width: 100%;
+  padding-left: 40px;
+  background-color: #f7f7f7;
+  border-radius: 15px;
+  height: 30px;
+  font-size: .01rem;
+}
+
+#header div .search .icon-search {
+  position: absolute;
+  top: 7px;
+  left: 15px;
+}
+
+#header div .icon-back {
+  width: 0.3rem;
+  text-align: center;
+  line-height: 30px;
+}
+
+#header div .icon-more {
+  width: 0.3rem;
+  text-align: center;
+  line-height: 30px;
+}
+
+#main {
+  height: 100%;
+  padding-bottom: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 40px;
+}
+
+#main > .left {
+  width: 1.5rem;
+  text-align: center;
+  overflow: hidden;
+}
+
+#main > .left .swiper-container {
+  height: 100%;
+}
+
+#main > .left .swiper-container .swiper-slide {
+  height: auto;
+}
+
+#main > .left .swiper-container .swiper-slide li {
+  width: 100%;
+  height: 46px;
+  line-height: 46px;
+  background-color: #f3f3f3;
+  font-size: 14px;
+}
+
+#main > .left .swiper-container .swiper-slide li.active {
+  background-color: #fff;
+}
+
+#main .right {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  overflow: hidden;
+}
+
+#main .right .swiper-container {
+  height: 100%;
+}
+
+#main .right .swiper-container .swiper-slide {
+  height: auto;
+}
+
+#main .right .swiper-container .swiper-slide #dd {
+  margin-top: .1rem;
+}
+
+#main .right .swiper-container .swiper-slide #dd img {
+  width: 100%;
+  height: 100%;
+}
+
+#main .right .swiper-container .swiper-slide #nav {
+  margin: .4rem 0;
+}
+
+#main .right .swiper-container .swiper-slide #nav .title {
+  font-size: .14rem;
+  font-weight: 700;
+}
+
+#main .right .swiper-container .swiper-slide #nav .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#main .right .swiper-container .swiper-slide #nav .content li {
+  width: 33%;
+  text-align: center;
+  margin-top: .1rem;
+}
+
+#main .right .swiper-container .swiper-slide #nav .content li img {
+  width: 0.65rem;
+}
+
+#main .right .swiper-container .swiper-slide #nav .content li a {
+  font-size: .14rem;
+  color: #000;
+}
+
+#main .right .swiper-container .swiper-slide #fenlei {
+  margin-top: .1rem;
+}
+
+#main .right .swiper-container .swiper-slide #fenlei .title {
+  font-size: .14rem;
+  position: relative;
+}
+
+#main .right .swiper-container .swiper-slide #fenlei .title .left {
+  font-weight: 700;
+}
+
+#main .right .swiper-container .swiper-slide #fenlei .title .right {
+  position: absolute;
+  right: 0;
+}
+
+#main .right .swiper-container .swiper-slide #fenlei .title .right .icon-paixingbang {
+  color: red;
+}
+
+#main .right .swiper-container .swiper-slide #fenlei .title .right i {
+  font-size: .14rem;
+}
+
+#main .right .swiper-container .swiper-slide #fenlei .content ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#main .right .swiper-container .swiper-slide #fenlei .content ul li {
+  width: 33.3%;
+  margin-top: .15rem;
+}
+
+#main .right .swiper-container .swiper-slide #fenlei .content ul li a {
+  text-align: center;
+  color: #000;
+  font-size: .14rem;
+}
+
+#main .right .swiper-container .swiper-slide #fenlei .content ul li a img {
+  display: block;
+  width: .7rem;
+  margin: 0 auto;
+}
+
+#main .right .swiper-container .swiper-slide #jiadian {
+  margin-top: .1rem;
+}
+
+#main .right .swiper-container .swiper-slide #jiadian .title {
+  font-size: .14rem;
+  font-weight: 700;
+}
+
+#main .right .swiper-container .swiper-slide #jiadian .content ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#main .right .swiper-container .swiper-slide #jiadian .content ul li {
+  width: 33.3%;
+  margin-top: .15rem;
+}
+
+#main .right .swiper-container .swiper-slide #jiadian .content ul li a {
+  text-align: center;
+  color: #000;
+  font-size: .14rem;
+}
+
+#main .right .swiper-container .swiper-slide #jiadian .content ul li a img {
+  display: block;
+  width: .7rem;
+  margin: 0 auto;
+}
+/*# sourceMappingURL=category.css.map */

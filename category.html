@@ -5,135 +5,278 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>分类页面</title>
-    <link rel="stylesheet" href="./styles/common.css">
+    <title>京东商品分类</title>
+    <!-- 引入站点图标 -->
+    <link rel="icon" href="https://so.m.jd.com/favicon.ico">
+    <!-- 引入样式表 -->
+    <link rel="stylesheet" href="./sass/category.css">
     <link rel="stylesheet" href="./less/base.css">
-    <link rel="stylesheet" href="./lib/swiper/css/swiper.css">
-    <link rel="stylesheet" href="./styles/category.css">
+    <!-- 引入字体图标 -->
+    <link rel="stylesheet" href="./lib/font_1021693_bdshvk3fhpl/iconfont.css">
+    <!-- 引入swiper文件 -->
+    <link rel="stylesheet" href="./lib/swiper/css/swiper.min.css">
+    <script src="./lib/swiper/js/swiper.min.js"></script>
+    <!-- 引入js文件 -->
+    <script src="js/comment.js"></script>
+    <script src="./js/category.js"></script>
 </head>
 
 <body>
+    <!-- 头部区域 -->
     <header id="header">
-        <a href="javascript:history.back()" class="icon-back"></a>
-        <form action="#">
-            <i class="icon-search"></i>
-            <input type="search" placeholder="请输入要搜索的商品">
-        </form>
-        <a href="#" class="icon-menu"></a>
+        <div class="bb">
+            <a href="#" class="iconfont icon-back"></a>
+            <div class="search">
+                <i class="iconfont icon-search"></i>
+                <input type="search" placeholder="苹果">
+            </div>
+            <a href="#" class="iconfont icon-more"></a>
+        </div>
     </header>
-    <div class="main">
+    <!-- 主体区域 -->
+    <main id="main">
+        <!-- 左边区域 -->
         <div class="left">
             <div class="swiper-container">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <ul style="font-size:16px">
-                            <li class="swiper-slide">第1个</li>
-                            <li>第2个</li>
-                            <li>第3个</li>
-                            <li>第4个</li>
-                            <li>第5个</li>
-                            <li>第6个</li>
-                            <li>第7个</li>
-                            <li>第8个</li>
-                            <li>第9个</li>
-                            <li>第10个</li>
-                            <li>第11个</li>
-                            <li>第12个</li>
-                            <li>第13个</li>
-                            <li>第14个</li>
-                            <li>第15个</li>
-                            <li>第16个</li>
-                            <li>第17个</li>
-                            <li>第18个</li>
-                            <li>第19个</li>
-                            <li>第20个</li>
-                            <li>第21个</li>
-                            <li>第22个</li>
-                            <li>第23个</li>
-                            <li>第24个</li>
-                            <li>第25个</li>
-                            <li>第26个</li>
-                            <li>第27个</li>
-                            <li>第28个</li>
-                            <li>第29个</li>
-                            <li>第30个</li>
-                            <li>第31个</li>
-                            <li>第32个</li>
-                            <li>第33个</li>
-                            <li>第34个</li>
-                            <li>第35个</li>
-                            <li>第36个</li>
-                            <li>第37个</li>
-                            <li>第38个</li>
-                            <li>第39个</li>
-                            <li>第40个</li>
-                            <li>第41个</li>
-                            <li>第42个</li>
-                            <li>第43个</li>
-                            <li>第44个</li>
-                            <li>第45个</li>
-                            <li>第46个</li>
-                            <li>第47个</li>
-                            <li>第48个</li>
-                            <li>第49个</li>
-                            <li>第50个</li>
-                            <li>第51个</li>
-                            <li>第52个</li>
-                            <li>第53个</li>
-                            <li>第54个</li>
-                            <li>第55个</li>
-                            <li>第56个</li>
-                            <li>第57个</li>
-                            <li>第58个</li>
-                            <li>第59个</li>
-                            <li>第60个</li>
-                            <li>第61个</li>
-                            <li>第62个</li>
-                            <li>第63个</li>
-                            <li>第64个</li>
-                            <li>第65个</li>
-                            <li>第66个</li>
-                            <li>第67个</li>
-                            <li>第68个</li>
-                            <li>第69个</li>
-                            <li>第70个</li>
-                            <li>第71个</li>
-                            <li>第72个</li>
-                            <li>第73个</li>
-                            <li>第74个</li>
-                            <li>第75个</li>
-                            <li>第76个</li>
-                            <li>第77个</li>
-                            <li>第78个</li>
-                            <li>第79个</li>
-                            <li>第80个</li>
-                            <li>第81个</li>
-                            <li>第82个</li>
-                            <li>第83个</li>
-                            <li>第84个</li>
-                            <li>第85个</li>
-                            <li>第86个</li>
-                            <li>第87个</li>
-                            <li>第88个</li>
-                            <li>第89个</li>
-                            <li>第90个</li>
-                            <li>第91个</li>
-                            <li>第92个</li>
-                            <li>第93个</li>
-                            <li>第94个</li>
-                            <li>第95个</li>
-                            <li>第96个</li>
-                            <li>第97个</li>
-                            <li>第98个</li>
-                            <li>第99个</li>
-                            <li>第100个</li>
+                        <ul>
+                            <li class="active"><a href="javascript:void(0);">热门推荐</a></li>
+                            <li><a href="javascript:void(0);">手机数码</a></li>
+                            <li><a href="javascript:void(0);">家用电器</a></li>
+                            <li><a href="javascript:void(0);">电脑办公</a></li>
+                            <li><a href="javascript:void(0);">计生情趣</a></li>
+                            <li><a href="javascript:void(0);">美妆护肤</a></li>
+                            <li><a href="javascript:void(0);">个护清洁</a></li>
+                            <li><a href="javascript:void(0);">汽车用品</a></li>
+                            <li><a href="javascript:void(0);">京东超市</a></li>
+                            <li><a href="javascript:void(0);">男装</a></li>
+                            <li><a href="javascript:void(0);">男鞋</a></li>
+                            <li><a href="javascript:void(0);">女装</a></li>
+                            <li><a href="javascript:void(0);">女鞋</a></li>
+                            <li><a href="javascript:void(0);">母婴童装</a></li>
+                            <li><a href="javascript:void(0);">运动户外</a></li>
+                            <li><a href="javascript:void(0);">内衣配饰</a></li>
+                            <li><a href="javascript:void(0);">食品生鲜</a></li>
+                            <li><a href="javascript:void(0);">酒水饮料</a></li>
+                            <li><a href="javascript:void(0);">家具家装</a></li>
+                            <li><a href="javascript:void(0);">家居厨具</a></li>
+                            <li><a href="javascript:void(0);">箱包手袋</a></li>
+                            <li><a href="javascript:void(0);">钟表珠宝</a></li>
+                            <li><a href="javascript:void(0);">图书音像</a></li>
+                            <li><a href="javascript:void(0);">玩具乐器</a></li>
+                            <li><a href="javascript:void(0);">医药保健</a></li>
+                            <li><a href="javascript:void(0);">宠物生活</a></li>
+                            <li><a href="javascript:void(0);">礼品鲜花</a></li>
+                            <li><a href="javascript:void(0);">农资绿植</a></li>
+                            <li><a href="javascript:void(0);">生活旅行</a></li>
+                            <li><a href="javascript:void(0);">奢侈品</a></li>
+                            <li><a href="javascript:void(0);">全球购</a></li>
+                            <li><a href="javascript:void(0);">国际名牌</a></li>
+                            <li><a href="javascript:void(0);">艺术邮币</a></li>
+                            <li><a href="javascript:void(0);">二手商品</a></li>
+                            <li><a href="javascript:void(0);">特产馆</a></li>
+                            <li><a href="javascript:void(0);">京东金融</a></li>
+                            <li><a href="javascript:void(0);">拍卖</a></li>
+                            <li><a href="javascript:void(0);">房产</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="right"></div>
-    </div>
+        <!-- 右边区域 -->
+        <div class="right">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <!-- 广告区域 -->
+                        <section id="dd">
+                            <a href="#">
+                                <img src="./images/dd.png" alt="">
+                            </a>
+                        </section>
+                        <!-- 导航区域 -->
+                        <section id="nav">
+                            <div class="title">京东年货</div>
+                            <ul class="content">
+                                <li>
+                                    <a href="#">
+                                        <img src="./images/mai.png" alt="">
+                                        <p>干果零食</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="./images/nian.png" alt="">
+                                        <p>酒类</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="./images/huo.png" alt="">
+                                        <p>新春女装</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="./images/shang.png" alt="">
+                                        <p>潮流男装</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="./images/jin.png" alt="">
+                                        <p>童装新品</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="./images/dong.png" alt="">
+                                        <p>电子数码</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </section>
+                        <!-- 内容区域 -->
+                        <section id="fenlei">
+                            <div class="title">
+                                <span class="left">热门分类</span>
+                                <a href="#" class="right">
+                                    <i class="iconfont icon-paixingbang"></i>
+                                    <span>排行榜</span>
+                                    <i class="iconfont icon-qianjin"></i>
+                                </a>
+                            </div>
+                            <div class="content">
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <img src="./images/hot1.png" alt="">
+                                            <p>手机</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="./images/hot2.png" alt="">
+                                            <p>华为</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="./images/hot3.png" alt="">
+                                            <p>充电宝</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="./images/hot4.png" alt="">
+                                            <p>电热毯</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="./images/hot5.png" alt="">
+                                            <p>电暖气</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="./images/hot6.png" alt="">
+                                            <p>男士内裤</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="./images/hot7.png" alt="">
+                                            <p>路由器</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="./images/hot8.png" alt="">
+                                            <p>U盘</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="./images/hot9.png" alt="">
+                                            <p>微波炉</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="./images/hot10.png" alt="">
+                                            <p>避孕套</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="./images/hot11.png" alt="">
+                                            <p>吹风机</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="./images/hot12.png" alt="">
+                                            <p>vivo</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="./images/hot13.png" alt="">
+                                            <p>热水袋</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="./images/hot14.png" alt="">
+                                            <p>羽绒服</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="./images/hot15.png" alt="">
+                                            <p>热水壶</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
+                        <section id="jiadian">
+                            <div class="title">
+                                <span>家电热搜</span>
+                            </div>
+                            <div class="content">
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <img src="./images/jia1.png" alt="">
+                                            <p>冰箱</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="./images/jia2.png" alt="">
+                                            <p>洗衣机</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="./images/jia3.png" alt="">
+                                            <p>电视</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+    <!-- 底部区域 -->
     <footer id="footer">
         <ul>
             <li><a href="./index.html"><img src="https://img11.360buyimg.com/jdphoto/s130x100_jfs/t1/15888/21/4695/6682/5c343890Ebdad5bec/c210d1fd6b8fd543.png"
@@ -148,8 +291,6 @@
                         alt=""></a></li>
         </ul>
     </footer>
-    <script src="./lib/swiper/js/swiper.min.js"></script>
-    <script src="./myjs/jd_category.js"></script>
 </body>
 
 </html>

@@ -1,238 +1,190 @@
-/* 在index.less文件夹里面引入公共的base.less文件 */
-
-// @import '指定less文件的路径'
-@import 'base.less';
-/* 自定义一个icon函数封装重复使用精灵图的代码  */
-
-.icon {    
-    /* 引入logo的精灵图图片 */
-    background-image: url(../images/sprites.png); // 背景图需要变小成 一半
-    background-size: 2rem 2rem; // 背景图的定位也要变小一半
-    /* 默认背景图不会跟随padding去改变位置  设置了背景图定位器起点和裁切可以让背景图参照padding来动 */
-    /* 设置背景图的定位参照点 */
-    background-origin: content-box; // 背景图的裁切 裁切掉除了这个范围以外的背景图
-    background-clip: content-box; // 如果需要对属性进行连写使用~进行转义把你要转义代码放到字符串里面 转义了之后这个/就不是除号了
-    // background: ~'url(../images/sprites.png) 0px -1.1rem / 2rem 2rem content-box content-box';
-}
-
+/* 导入初始化css文件 */
+@import "./base.less";
+/* 主页样式 */
+/* 头部样式 */
 #header {
+    display: flex;
     position: fixed;
-    z-index: 999;
-    /* 如果设置了固定定位 脱标了之后宽度都没有的会按照内容撑开 如果想要100%需要手动设置 */
     width: 100%;
-    /* 父元素设置flex布局 */
-    display: flex; // > 表示子代 直接子元素  这种注释编译后会删除
-    /* > 表示子代 直接子元素  这种注释编译后会保留 */
-    >.icon-logo {
-        width: 0.8rem;
-        height: 0.45rem;
-        /* 调用自定义函数 icon */
-        .icon;
-        background-position: 0px -1.1rem;
-        /* 盒子虽然很大80 但是真实显示图片只有 60*25 图片是居中在页面里面显示 设置一个padding把图片挤到中间来 */
-        padding: 0.1rem;
+    z-index: 2;
+    .icon-logo {
+        width: 1.6rem;
+        padding: 0.2rem;
+        background-image: url(../images/sprites.png);
+        background-size: 4rem 4rem;
+        background-position-y: -2.2rem;
+        background-clip: content-box;
+        background-origin: content-box;
     }
-    >form {
+    form {
         flex: 1;
-        padding-top: 0.05rem;
+        height: 0.8rem;
         position: relative;
-        .icon-search {
-            /* 调用自定义函数icon */
-            .icon;
-            background-position: -0.6rem -1.1rem;
-            width: 0.2rem;
-            height: 0.2rem;
-            position: absolute;
-            left: 0.1rem;
-            top: 0.14rem;
+        padding-top: 0.1rem;
+        .search {
+            height: 0.6rem;
+            border: 1px solid #ccc;
+            padding-left: 0.6rem;
+            border-radius: 30px;
+            width: 100%;
+
         }
         input {
-            width: 100%;
-            height: 0.35rem;
-            border-radius: 0.17rem;
-            padding-left: 0.3rem;
-            font-size: 0.14rem;
+            font-size: .28rem;
+        }
+        .icon-search {
+            position: absolute;
+            background-image: url(../images/sprites.png);
+            background-size: 4rem 4rem;
+            background-position: -1.2rem -2.2rem;
+            width: 0.4rem;
+            height: 0.4rem;
+            left: 0.2rem;
+            top: 0.2rem;
         }
     }
-    >.login {
-        width: 0.5rem;
+    .login {
+        width: 1rem;
+        line-height: 0.8rem;
         text-align: center;
-        line-height: 0.45rem;
         color: #fff;
     }
 }
 
+// 轮播图样式
 #slide {
+    height: 3.6rem;
+    width: 100%;
     img {
         width: 100%;
+        height: 100%;
     }
-    .swiper-pagination-bullet{
-        background-color: #f00;
-        opacity: 1;
-    }
-    .swiper-pagination-bullet-active{
-        background-color: #0f0;
-    }
-}
+}  
 
-/* 导航条样式 */
-
+//导航栏样式
 #nav {
-    /* 父元素和子元素的间距使用padding  只给nav设置上下padding*/
-    padding: 0.1rem 0;
+    padding: .2rem 0;
     ul {
         display: flex;
-        /* 让flex布局支持换行 */
         flex-wrap: wrap;
         li {
             width: 25%;
-            a {
+            text-align: center;
+            img {
+                width: 0.8rem;
+                height: 0.8rem;
+            }
+            p {
+                margin: .1rem 0;
+                color: #666;
+            }
+        }
+    }
+}
+
+// 主体页面样式
+#main {
+    padding: .4rem .2rem;
+    background-color: #f5f5f5;
+    margin-bottom: .6rem;
+    .seckill {
+        .title {
+            background-color: #fff;
+            padding: 0 .1rem;
+            position: relative;
+            line-height: 0.5rem;
+            span {
+                margin-left: .1rem;
+            }
+            .txt {
+                color: @jdColor;
+            }
+            .time:not(:nth-child(3n-1)) {
+                width: 0.3rem;
+                height: 0.3rem;
+                background-color: #000;
+                color: #fff;
+                display: inline-block;
+                line-height: 0.3rem;
                 text-align: center;
-                /* 如果想给a设置文本居中属性 让文本和 图片居中一定要转块 */
-                display: block;
+            }
+            .more {
+                position: absolute;
+                right: .1rem;
+                color: #666666;
+            }
+        }
+        .content {
+            display: flex;
+            width: 100%;
+            height: 3.2rem;
+            padding-top: .2rem;
+            background-color: #fff;
+            .goods {
+                flex: 1;
+                height: 100%;
                 img {
-                    width: 0.4rem;
-                    height: 0.4rem;
+                    width: 100%;
                 }
                 p {
-                    /* 兄弟之间使用margin */
-                    margin: 0.05rem 0;
+                    color: @jdColor;
+                    font-size: .2rem;
+                    text-align: center;
+                }
+                s {
+                    display: block;
+                    text-align: center;
+                    font-size: .2rem;
+                    color: #666;
                 }
             }
+            
         }
     }
-}
-
-/* 主体商品区域 */
-
-#main {
-    /* 设置内边距 父子之间的间距 */
-    padding: 0.1rem;
-    /* 为了把main里面的商品内容往上挤 60px 为了不和底部重叠在一起 */
-    padding-bottom: 0.6rem;
-    background-color: #eee;
-    /* 秒杀商品 */
-    .seckill {
-        background-color: #fff;
-        box-shadow: 0px 0px 0.02rem 0.01rem hotpink;
-        .title {
-            display: flex;
-            /* 设置伸缩布局2端对齐 */
-            justify-content: space-between; // position: relative;
-            line-height: 0.3rem;
-            .left {
-                display: flex;
-                .seckill-icon {
-                    width: 0.20rem;
-                    height: 0.25rem;
-                    margin-left: 0.05rem;
-                }
-                .seckill-name {
-                    margin-left: 0.05rem;
-                    /* 使用主体色变量 */
-                    color: @main-color;
-                }
-                .seckill-downtime {
-                    margin-left: 0.05rem; // 排除span里面 3的倍数的span 排除了2个冒号
-                    span:not(:nth-child(3n)) {
-                        background-color: #000;
-                        color: #fff;
-                        width: 0.15rem;
-                        display: inline-block;
-                        text-align: center;
-                        line-height: 0.15rem;
-                    }
-                }
-            }
-            .right {
-                /* float: right; */
-                // position: absolute;
-                // right: 0;
-                .more {
-                    margin-right: 0.1rem;
-                }
-            }
-        }
-        .content {
-            ul {
-                display: flex;
-                li {
-                    width: 33.33%;
-                    a {
-                        display: block;
-                        text-align: center;
-                        img {
-                            width: 1.1rem;
-                        }
-                        span {
-                            display: block;
-                            font-size: 0.12rem;
-                            color: @main-color;
-                        }
-                        del {
-                            display: block;
-                            font-size: 0.12rem;
-                            color: #ccc;
-                        }
-                    }
-                    /* 相邻后面所有兄弟选择器 */
-                    &~li {
-                        border-left: 0.01rem solid #ccc;
-                    }
-                }
-                /* 排除自己选中自己后面的所有兄弟元素 排除了第一个li */
-                /* li ~ li{
-                    border-left: 0.01rem solid #000;
-                } */
-            }
-        }
-    }
-    /* 京东超市 */
     .jd-market {
+        height: 4.5rem;
         background-color: #fff;
-        box-shadow: 0px 0px 0.02rem 0.01rem hotpink;
-        margin-top: 0.1rem;
+        margin-top: .2rem;
         .title {
-            line-height: 0.3rem;
-            h4 {
-                padding-left: 0.3rem;
-                position: relative;
+            color: #000;
+            height: 0.6rem;
+            line-height: 0.6rem;
+            p {
+                padding-left: 0.45rem;
                 font-weight: normal;
+                position: relative;
                 &::before {
                     content: '';
-                    background-color: @main-color;
-                    width: 0.04rem;
-                    height: 0.16rem;
+                    background-color: @jdColor;
+                    width: 0.1rem;
+                    height: 0.3rem;
                     position: absolute;
                     left: 0.2rem;
-                    top: 0.07rem;
+                    top: 0.15rem;
                 }
             }
         }
         .content {
+            height: 3.9rem;
             display: flex;
             .left {
-                width: 50%;
-                a {
-                    display: block;
-                    img {
-                        width: 100%;
-                    }
+                flex: 1;
+                width: 100%;
+                img  {
+                    width: 100%;
                 }
-                
             }
             .right {
-                width: 50%;
-                a {
-                    display: block;
-                    img {
-                        width: 100%;
-                    }
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                img {
+                    width: 100%;
                 }
+
             }
         }
     }
 }
 
-/* 底部区域 */
 

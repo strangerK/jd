@@ -1,33 +1,22 @@
-/* 定义网站全局变量 */
-/* 京东红的主题色 */
 html {
-  /* 设置根元素大小为 26.6667vw 根元素在 375屏幕 1rem == 100px  只要把页面所有px单位缩小100倍 就是rem值 */
-  font-size: 26.6667vw;
+  font-size: 13.33333333vw;
 }
-/* 给所有标签都去除默认样式 */
 * {
-  margin: 0;
   padding: 0;
-  /* 移动端不允许网页出现横向滚动条 */
-  /* 而且页面都是全屏盛满 宽度通常100% */
-  /* 让盒模型的计算方式 固定为 设置 width 和 height 
-    如果 padding border 会把content内容挤小 */
-  /* 因为所有都要设置这个属性 放到*号里面 */
+  margin: 0;
   box-sizing: border-box;
-  /* 移动端一些能按住的元素会有一个高亮背景色 */
   -webkit-tap-highlight-color: transparent;
 }
-/* 给body设置默认字体样式 */
 body {
   font-family: '微软雅黑';
   /* 移动端默认字体一般是14px */
-  font-size: 0.14rem;
+  font-size: 0.28rem;
 }
 li {
   list-style: none;
 }
 a {
-  color: #666;
+  color: #333;
   text-decoration: none;
 }
 img {
@@ -39,16 +28,33 @@ input {
   /* 去掉内边框 */
   outline: 0;
 }
-/* 定义一些重复边框类名 */
-.bt {
+.lb {
+  border-left: 1px solid #ccc;
+}
+.rb {
+  border-right: 1px solid #ccc;
+}
+.tb {
   border-top: 1px solid #ccc;
 }
 .bb {
   border-bottom: 1px solid #ccc;
 }
-.bl {
-  border-left: 1px solid #ccc;
+#footer {
+  background-color: #de181b;
+  position: fixed;
+  height: 1rem;
+  width: 100%;
+  bottom: 0;
 }
-.br {
-  border-right: 1px solid #ccc;
+#footer ul {
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+#footer ul li {
+  width: 20%;
+}
+#footer ul li a img {
+  height: 100%;
 }
